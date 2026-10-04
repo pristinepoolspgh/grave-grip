@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Grave Grip Drink Holder</title>
-<meta name="description" content="A 3D-printed skeleton hand that clamps onto your chair arm and holds your drink. Seven colors, printed to order. $25 with free shipping.">
+<meta name="description" content="A 3D-printed skeleton hand that clamps onto your chair arm and holds your drink. Seven colors, printed to order. $30 with free shipping.">
 <meta property="og:title" content="Grave Grip Drink Holder">
 <meta property="og:description" content="A skeleton hand that clamps onto your chair arm and holds your drink. Seven colors, printed to order.">
 <meta property="og:image" content="/img/glow-8539.jpg">
@@ -141,14 +141,14 @@ footer{padding-top:32px;border-top:1.5px solid var(--line);display:flex;flex-wra
       <div class="buy">
         <h1>A hand for your drink.</h1>
         <p class="lede">A skeleton hand that clamps onto your chair arm and holds your can for you. Screw it on, drop in a drink, and leave it there all season.</p>
-        <div class="price"><strong>$25</strong><small>each · free shipping</small></div>
+        <div class="price"><strong>$30</strong><small>each · free shipping</small></div>
 
         <fieldset>
           <legend>Filament color: <b id="colorName">Rainbow</b></legend>
           <div class="spools" id="spools"></div>
         </fieldset>
 
-        <a class="cta" id="buyBtn" href="#" target="_blank" rel="noopener">Buy now · $25</a>
+        <a class="cta" id="buyBtn" href="#" target="_blank" rel="noopener">Buy now · $30</a>
         <ul class="fine">
           <li>Secure Stripe checkout</li>
           <li>Printed to order</li>
@@ -253,7 +253,7 @@ function render(){
   if (STRIPE_LINK) {
     btn.href = STRIPE_LINK + "?client_reference_id=" + color.id;
     btn.removeAttribute("aria-disabled");
-    btn.textContent = `Buy ${color.name} · $25`;
+    btn.textContent = `Buy ${color.name} · $30`;
   } else {
     btn.removeAttribute("href");
     btn.setAttribute("aria-disabled","true");
