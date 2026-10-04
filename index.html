@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Grave Grip Drink Holder</title>
-<meta name="description" content="A 3D-printed skeleton hand that clamps onto your chair arm and holds your drink. Seven colors, printed to order. $30 with free shipping.">
+<meta name="description" content="A 3D-printed skeleton hand that clamps onto your chair arm and holds your drink. Seven colors, printed to order. $25 with free shipping.">
 <meta property="og:title" content="Grave Grip Drink Holder">
 <meta property="og:description" content="A skeleton hand that clamps onto your chair arm and holds your drink. Seven colors, printed to order.">
 <meta property="og:image" content="/img/glow-8539.jpg">
@@ -63,6 +63,9 @@ h1{font-family:var(--display);font-weight:400;font-size:clamp(2.6rem,6vw,4.4rem)
 .lede{margin:0;color:var(--muted);max-width:40ch}
 .price{display:flex;align-items:baseline;gap:12px}
 .price strong{font-size:2rem;font-weight:800;font-variant-numeric:tabular-nums}
+.price{flex-wrap:wrap}
+.price .was{font-size:1.3rem;font-weight:600;color:var(--muted);text-decoration-thickness:2px;text-decoration-color:var(--accent);font-variant-numeric:tabular-nums}
+.price .deal{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;background:var(--accent);color:var(--on-accent);padding:4px 9px;border-radius:999px;align-self:center;transition:background .3s}
 .price small{font-family:var(--mono);font-size:.75rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
 
 fieldset{border:0;margin:0;padding:0;display:grid;gap:12px}
@@ -141,14 +144,14 @@ footer{padding-top:32px;border-top:1.5px solid var(--line);display:flex;flex-wra
       <div class="buy">
         <h1>A hand for your drink.</h1>
         <p class="lede">A skeleton hand that clamps onto your chair arm and holds your can for you. Screw it on, drop in a drink, and leave it there all season.</p>
-        <div class="price"><strong>$30</strong><small>each · free shipping</small></div>
+        <div class="price"><s class="was" aria-label="Regular price $29">$29</s><strong>$25</strong><span class="deal">Launch special</span><small>each · free shipping</small></div>
 
         <fieldset>
           <legend>Filament color: <b id="colorName">Rainbow</b></legend>
           <div class="spools" id="spools"></div>
         </fieldset>
 
-        <a class="cta" id="buyBtn" href="#" target="_blank" rel="noopener">Buy now · $30</a>
+        <a class="cta" id="buyBtn" href="#" target="_blank" rel="noopener">Buy now · $25</a>
         <ul class="fine">
           <li>Secure Stripe checkout</li>
           <li>Printed to order</li>
@@ -253,7 +256,7 @@ function render(){
   if (STRIPE_LINK) {
     btn.href = STRIPE_LINK + "?client_reference_id=" + color.id;
     btn.removeAttribute("aria-disabled");
-    btn.textContent = `Buy ${color.name} · $30`;
+    btn.textContent = `Buy ${color.name} · $25`;
   } else {
     btn.removeAttribute("href");
     btn.setAttribute("aria-disabled","true");
